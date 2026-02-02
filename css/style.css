@@ -1,0 +1,91 @@
+/* 全体設定 */
+html { overflow-y: scroll; }
+body {
+    font-family: "Helvetica Neue", Arial, "Hiragino Sans", sans-serif;
+    background-color: #fdfaf2; 
+    margin: 0;
+    color: #333;
+}
+
+/* ヘッダー */
+.main-header {
+    background: #fff;
+    border-bottom: 3px solid #333; 
+    padding: 15px 0;
+}
+.header-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.logo-area { display: flex; align-items: center; gap: 15px; }
+.main-logo { height: 40px; }
+.tagline { font-size: 0.9rem; font-weight: bold; color: #888; }
+.top-nav { display: flex; justify-content: space-between; margin-top: 10px; font-size: 13px; }
+
+/* メイン */
+main {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+.breadcrumb { font-size: 12px; color: #777; margin-bottom: 20px; }
+
+/* 3×3 グリッドレイアウト */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+/* タイルカードの設定 */
+.card-link { text-decoration: none; color: inherit; }
+.card {
+    background: #fff;
+    border: 3px solid #333; /* ふちをくっきり */
+    padding: 25px 15px;
+    text-align: center;
+    transition: all 0.2s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ホバー：くっきりした影が出るアニメーション */
+.card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 4px 4px 0px #333;
+    background-color: #fffdec;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 12px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card h3 { font-size: 1.1rem; margin-bottom: 5px; }
+.card p { font-size: 0.8rem; color: #666; margin: 0; }
+
+/* タイル背景色 */
+.tile-1 { background-color: #eef7ff; }
+.tile-2 { background-color: #efffee; }
+.tile-3 { background-color: #fff9ee; }
+.tile-4 { background-color: #f9eeff; }
+.tile-5 { background-color: #eeffff; }
+.tile-6 { background-color: #ffeeee; }
+.tile-7 { background-color: #f7f7f7; }
+.tile-8 { background-color: #fff0f5; }
+.tile-9 { background-color: #f0fff0; }
+
+footer { text-align: center; padding: 50px; color: #888; font-size: 12px; }
+
+/* スマホ対応 */
+@media (max-width: 700px) {
+    .grid-container { grid-template-columns: 1fr; }
+}
